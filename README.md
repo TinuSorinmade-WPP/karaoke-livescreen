@@ -58,10 +58,10 @@ pip install -r requirements.txt
 3. Set up environment variables (for Open-AI)
 
 ```bash
-set AZURE_KEY={Your Azure Key} - NO SPACES BETWEEN = AND THE KEY
+set AZURE_KEY={Your Azure Key} 
 echo %AZURE_KEY% # to check it saved properly
 set AZURE_ENDPOINT={Your Azure Endpoint}
-echo %AZURE_ENDPOINT%- NO SPACES BETWEEN = AND THE ENDPOINT ADDRESSxxxxxxxxxx set AZURE_KEY={Your Azure Key} - NO SPACES BETWEEN = AND THE KEYecho %AZURE_KEY% # to check it saved properlyset AZURE_ENDPOINT={Your Azure Endpoint}echo %AZURE_ENDPOINT%- NO SPACES BETWEEN = AND THE ENDPOINT ADDRESS# Create .env file with:OPENAI_API_KEY=your_api_key_here
+echo %AZURE_ENDPOINT% # to check it saved properly
 ```
 
 
