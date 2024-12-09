@@ -197,6 +197,34 @@ def chat_gpt_fact(audiofile_path):
 
 
 ######################
+# Read the JSON 1 file #
+######################
+
+def read_json_file(file_path):
+    # Check if the file exists
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"JSON file not found: {file_path}")
+    try:
+        # Open and load the JSON file
+        with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+        
+        # Validate the data structure
+        if not isinstance(data, list):
+            raise ValueError("JSON data must be a list")
+        
+        # Validate that each item contains the required fields
+        for item in data:
+            if not all(key in item for key in ['start', 'end', 'text']):
+                raise ValueError("Each item must have 'start', 'end', and 'text' fields")
+        return data
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Invalid JSON format: {e}")
+    except Exception as e:
+        raise Exception(f"Error reading JSON file: {e}")
+    
+
+######################
 # Read the JSON file #
 ######################
 def read_the_file(json_path): 

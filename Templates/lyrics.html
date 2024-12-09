@@ -18,17 +18,26 @@
               <!-- Main TV Screen -->
               <div id="main-tv-screen" style="display:none;" class="video">
                 <div class="form-container">
-                  <h2>Your Karaoke is Ready!</h2>
-                  <!-- Display lyrics and stems -->
-                  <div class="lyrics-section">
-                    <h3>Lyrics:</h3>
-                    <p>{{ lyrics }}</p>
+                  <div class="controls">
+                    <button onclick="startLyrics()">Start</button>
+                    <button onclick="resetLyrics()">Reset</button>
                   </div>
-                  <div class="stems-section">
-                    <h3>Stems:</h3>
-                    <p>{{ stems }}</p>
+                  <div id="lyrics">Click Start to begin...</div> {% if error %} <div class="error">{{ error }}</div> {% endif %}
+                  <!-- Audio elements -->
+                  <audio id="vocals" preload="auto">
+                    <source src="{{ vocals_path }}" type="audio/mpeg">
+                  </audio>
+                  <audio id="instrumental" preload="auto">
+                    <source src="{{ instrumental_path }}" type="audio/mpeg">
+                  </audio>
+                  <!-- Volume Controls -->
+                  <div class="volume-controls">
+                    <label>Vocals Volume: <input type="range" min="0" max="1" step="0.1" value="0.2" onchange="vocalsAudio.volume = this.value">
+                    </label>
+                    <br>
+                    <label>Instrumental Volume: <input type="range" min="0" max="1" step="0.1" value="1.0" onchange="instrumentalAudio.volume = this.value">
+                    </label>
                   </div>
-                  <button onclick="window.location.href='/'">Start New Song</button>
                 </div>
               </div>
             </div>
@@ -42,6 +51,20 @@
         <h1>KARAOKE TIME</h1>
       </div>
     </section>
+    <script>
+      // Get the song data from Flask with error handling
+      let songData;
+      try {
+        songData = JSON.parse('{{ song_data|tojson|safe }}');
+        if (songData.length === 0) {
+          document.getElementById('lyrics').textContent = "No lyrics data available";
+        }
+      } catch (e) {
+        console.error("Error parsing song data:", e);
+        document.getElementById('lyrics').textContent = "Error loading lyrics";
+      }
+    </script>
+    <script src="{{ url_for('static', filename='Javascript/lyrics.js') }}"></script>
     <script src="/static/Javascript/script.js"></script>
   </body>
 </html>
