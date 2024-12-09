@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Web Karaoke: Lyrics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/CSS/style.css">
+  </head>
+  <body>
+    <div></div>
+    <section class="section gutter">
+      <div class="wrapper">
+        <div class="tv">
+          <div id="tv_viewport" class="viewport">
+            <div id="tv_content">
+              <!-- Loading Screen -->
+              <img id="loading-screen" class="video" src="https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571155222/giphy_n0r827.gif" alt="Loading...">
+              <!-- Main TV Screen -->
+              <div id="main-tv-screen" style="display:none;" class="video">
+                <div class="form-container">
+                  <h2>Your Karaoke is Ready!</h2>
+                  <!-- Display lyrics and stems -->
+                  <div class="lyrics-section">
+                    <h3>Lyrics:</h3>
+                    <p>{{ lyrics }}</p>
+                  </div>
+                  <div class="stems-section">
+                    <h3>Stems:</h3>
+                    <p>{{ stems }}</p>
+                  </div>
+                  <button onclick="window.location.href='/'">Start New Song</button>
+                </div>
+              </div>
+            </div>
+            <div id="tv_pixels" class="pixels" style="background-image: url('https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119227/vhs-overlay_zpzs7x.png')"></div>
+          </div>
+          <img class="tv" src="https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119227/80s-tv_ekkex2.png" alt="TV">
+          <span class="cta">YOUR KARAOKE</span>
+        </div>
+      </div>
+      <div class="heading">
+        <h1>KARAOKE TIME</h1>
+      </div>
+    </section>
+    <script src="/static/Javascript/script.js"></script>
+  </body>
+</html>

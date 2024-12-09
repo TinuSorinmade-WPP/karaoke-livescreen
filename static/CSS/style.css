@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|VT323&display=swap");
+
+body {
+position: relative;
+background-color: #000;
+font-family: Roboto;
+color: #ccc;
+}
+
+body:before {
+position: fixed;
+z-index: -999;
+top: 0; right: 0; bottom: 0; left: 0;
+background-image: url('https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119521/space-background_fowfq3.jpg');
+opacity: 0.5;
+content: '';
+}
+
+img {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.section {
+padding-top: 9rem;
+padding-bottom: 0rem;
+}
+
+.gutter {
+padding-right: 10rem;
+padding-left: 10rem;
+}
+
+.wrapper {
+max-width: 1080px;
+margin: auto;
+}
+
+.tv {
+position: relative;
+margin-right: 1rem;
+}
+
+/* TV and Screen */
+.tv .tv {
+position: relative;
+width: 100%;
+height: auto;
+z-index: 4;
+pointer-events: none;
+}
+
+.tv .viewport {
+position: absolute;
+top: 9%;
+right: 26%;
+bottom: 15%;
+left: 7%;
+background: #161616;
+z-index: 1;
+overflow: hidden;
+}
+
+#tv_content {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 2;
+}
+
+.tv .viewport .video {
+z-index: 2;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.tv .viewport .pixels {
+z-index: 3;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+pointer-events: none;
+}
+
+/* Form Styles */
+#main-tv-screen {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+padding: 20px;
+background: linear-gradient(45deg, #9b3cb0, #3c0283);
+color: #fff;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+font-family: 'Arial', sans-serif;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 3;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  z-index: 3;
+}
+
+
+.form-container p {
+  transform: none !important;
+  text-align: center; /* This ensures that the text is centered */
+}
+
+#main-tv-screen h2 {
+color: #fff;
+font-size: 3em;
+text-transform: uppercase;
+margin-bottom: 20px;
+text-align: center;
+width: 100%;
+}
+
+#main-tv-screen input {
+width: 100%;
+padding: 10px 15px;
+margin-bottom: 10px;
+border: 2px solid rgba(255, 255, 255, 0.2);
+background: rgba(255, 255, 255, 0.1);
+border-radius: 4px;
+color: white;
+font-size: 1rem;
+}
+
+#main-tv-screen input::placeholder {
+color: rgba(255, 255, 255, 0.7);
+}
+
+#main-tv-screen input:focus {
+outline: none;
+border-color: rgba(255, 255, 255, 0.5);
+}
+
+#main-tv-screen button {
+width: 100%;
+padding: 10px 15px;
+background: linear-gradient(45deg, #ac377f, #e011eb);
+border: none;
+border-radius: 4px;
+color: white;
+font-size: 1rem;
+text-transform: uppercase;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+#main-tv-screen button:hover {
+background: rgba(255, 255, 255, 0.3);
+}
+
+.heading {
+width: 100%;
+text-shadow: 0 2px 8px #999;
+letter-spacing: 0.2em;
+font-weight: bold;
+font-size: 4rem;
+text-align: center;
+}
+
+/* CTA Span */
+.tv .cta {
+position: absolute;
+top: 0;
+right: 0;
+transform-origin: bottom left;
+transform: translate(100%, 0) rotate(90deg);
+text-shadow: 0 2px 8px #999;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-family: Roboto;
+color: #ccc;
+z-index: 5;
+}
