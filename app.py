@@ -107,7 +107,7 @@ def lyrics():
 
     except Exception as e:
         # If something goes wrong, log it and show an error on the page
-        print(f"Error: {e}")
+     #   print(f"Error: {e}")
         return render_template('lyrics.html', song_data=[], error=str(e))
 
 # Route to serve audio files (for streaming or download)
@@ -124,7 +124,7 @@ def serve_audio(filename):
         return send_file(str(audio_path), mimetype='audio/mpeg')
     except Exception as e:
         # Handle any errors that might occur
-        print(f"Error serving audio: {e}")
+      #  print(f"Error serving audio: {e}")
         return f"Error serving audio file: {str(e)}", 404
 
 # Run the Flask app in debug mode
