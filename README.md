@@ -48,8 +48,6 @@ cd web-karaoke
 2. Create a virtual environment and Install dependencies
 
 ```bash
-mkdir [Name of the File]
-cd file
 virtualenv venv 
 venv\scripts\activate
 pip install -r requirements.txt
