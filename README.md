@@ -92,3 +92,6 @@ echo %AZURE_ENDPOINT% # to check it saved properly
 - Shows synchronised lyrics
 - Highlights current line being sung
 - Adjustable audio mixing
+
+
+  Note: TV image and background image and inspiration sourced from: https://codepen.io/TylerUnderwood/pen/BdWagp
