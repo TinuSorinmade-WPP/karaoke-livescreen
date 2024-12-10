@@ -69,19 +69,12 @@ echo %AZURE_ENDPOINT% # to check it saved properly
 ## Key Components
 
 - **Song Processing**: Uses Demucs to separate vocals from instrumental tracks
-
-  
-
+![Main UI](https://raw.githubusercontent.com/TinuSorinmade-WPP/karaoke-livescreen/master/Main%20UI.png)
 - **Lyrics Synchronisation**: Matches transcribed lyrics with audio timing
-
-  
-
+![Lyric Synchronisation](https://raw.githubusercontent.com/TinuSorinmade-WPP/karaoke-livescreen/master/Lyric%20Synchronisation.png)
 - **Audio Control**: Independent volume control for vocals and instrumental tracks!
-
-  
-
 - **Interactive Interface**: Retro TV-style design with start/reset controls - as well as a fun fact to keep the user engaged whilst the karaoke set up is underway!
-
+![Fun Fact](https://raw.githubusercontent.com/TinuSorinmade-WPP/karaoke-livescreen/master/Fun-Fact.png)
 ## Features in Detail
 
 1. **Song Search & Download**
