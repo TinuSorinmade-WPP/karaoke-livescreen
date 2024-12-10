@@ -44,7 +44,7 @@
             <div id="tv_pixels" class="pixels" style="background-image: url('https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119227/vhs-overlay_zpzs7x.png')"></div>
           </div>
           <img class="tv" src="https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119227/80s-tv_ekkex2.png" alt="TV">
-          <span class="cta">YOUR KARAOKE</span>
+          <span class="cta">SING ALONG!</span>
         </div>
       </div>
       <div class="heading">
@@ -52,7 +52,7 @@
       </div>
     </section>
     <script>
-      // Get the song data from Flask with error handling
+      // Get the song data from Flask
       let songData;
       try {
         songData = JSON.parse('{{ song_data|tojson|safe }}');

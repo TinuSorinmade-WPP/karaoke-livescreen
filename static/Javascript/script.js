@@ -10,7 +10,7 @@ class GifTV {
         this.staticSound = 'https://freesound.org/data/previews/41/41029_410502-lq.mp3';
     }
         
-    // Method to play sound
+    // To play sound
     playSound(volume) {
         try {
             // Create a new Audio object with the defined sound URL
@@ -22,13 +22,13 @@ class GifTV {
         }
     }
     
-    // Method to handle form submission
+    // To handle form submission
     handleFormSubmit() {
         // Play the sound at a lower volume when the form is submitted
         this.playSound(0.3);
     }
     
-    // Method to initialise the GifTV experience
+    // To initialise the GifTV experience
     init() {
         // Set the initial display state of the GIF and karaoke form
         this.gifVideo.style.display = 'block'; // Show the GIF initially
@@ -48,7 +48,7 @@ class GifTV {
     }
 }
 
-// Initialise the GifTV class when the DOM content is fully loaded
+// Initialise the TV class when the DOM content is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     const gifTV = new GifTV(); // Create a new instance of GifTV
     gifTV.init(); // Initialise the GifTV experience

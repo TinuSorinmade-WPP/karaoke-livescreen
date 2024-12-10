@@ -114,7 +114,6 @@ def lyrics():
 @app.route('/audio/<path:filename>')
 def serve_audio(filename):
     try:
-        # Use pathlib to resolve the file path
         audio_path = Path(filename).resolve()
         
         # Check if the file actually exists

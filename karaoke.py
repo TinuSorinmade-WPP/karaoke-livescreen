@@ -180,7 +180,7 @@ def chat_gpt_fact(audiofile_path):
     
     # Define the messages to send to the GPT model
     messages = [
-        {"role": "system", "content": f"Generate a music fact about this song or any of the artists who made this song: {chatgpt_song_title}. Make sure there is a '/' between each fact and that the output is maximum 50 words!"},  # System message with context
+        {"role": "system", "content": f"Generate a music fact about this song or any of the artists who made this song: {chatgpt_song_title}. Make sure that the fact output is maximum 50 words!"},  # System message with context
         {"role": "user", "content": f"Please generate a fact about this song or any of the artists who made this song: {chatgpt_song_title}"}  # User's request for a music fact
     ]
     # Make the API call to Azure OpenAI to generate the completion (fact about the song)
@@ -191,9 +191,10 @@ def chat_gpt_fact(audiofile_path):
     # Extract the generated fact from the response, specifically from the first choice's 'message' field
     music_fact = response.choices[0].message.content
     # Clean the fact by removing unnecessary newline characters (if any) to make it more readable
-    encoded_fact = music_fact.replace("\n\n", "")    
+    first_fact = music_fact.replace("\n", "")   
+    encoded_fact = first_fact.replace("\\'", "'")
     # Return the cleaned-up music fact (URL-encoded if necessary, but here it's just a string)
-    return encoded_fact  # Return the final music fact
+    return encoded_fact  
 
 
 ######################

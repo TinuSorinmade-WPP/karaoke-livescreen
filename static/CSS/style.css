@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
 body {
 position: relative;
 background-color: #000;
-font-family: Roboto;
+font-family: Silkscreen;
 color: #ccc;
 }
 
@@ -107,7 +108,7 @@ padding: 20px;
 background: linear-gradient(45deg, #9b3cb0, #3c0283);
 color: #fff;
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-font-family: 'Arial', sans-serif;
+font-family: Silkscreen;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -124,19 +125,30 @@ z-index: 3;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  z-index: 3;
+  z-index: 3; 
 }
 
 
 .form-container p {
   transform: none !important;
   text-align: center; /* This ensures that the text is centered */
+  font-weight: 400;
 }
 
 #main-tv-screen h2 {
 color: #fff;
 font-size: 3em;
-text-transform: uppercase;
+text-transform: none;
+margin-bottom: 20px;
+text-align: center;
+width: 100%;
+}
+
+
+#main-tv-screen h1 {
+color: #fff;
+font-size: 1.5em;
+text-transform: none;
 margin-bottom: 20px;
 text-align: center;
 width: 100%;
@@ -151,6 +163,8 @@ background: rgba(255, 255, 255, 0.1);
 border-radius: 4px;
 color: white;
 font-size: 1rem;
+font-family: Silkscreen;
+
 }
 
 #main-tv-screen input::placeholder {
@@ -163,16 +177,17 @@ border-color: rgba(255, 255, 255, 0.5);
 }
 
 #main-tv-screen button {
-width: 100%;
+width: 70%;
 padding: 10px 15px;
 background: linear-gradient(45deg, #ac377f, #e011eb);
 border: none;
-border-radius: 4px;
+border-radius: 12px;
 color: white;
 font-size: 1rem;
-text-transform: uppercase;
+text-transform: none;
 cursor: pointer;
 transition: background 0.3s ease;
+font-family: Silkscreen;
 }
 
 #main-tv-screen button:hover {
@@ -198,30 +213,42 @@ transform: translate(100%, 0) rotate(90deg);
 text-shadow: 0 2px 8px #999;
 text-transform: uppercase;
 letter-spacing: 1px;
-font-family: Roboto;
+font-family: Silkscreen;
 color: #ccc;
 z-index: 5;
 }
 
 #lyrics {
-  font-size: 24px;
-  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-family: Silkscreen;
+  font-weight: 700;
   white-space: pre-wrap;
   margin: 20px;
   text-align: center;
   min-height: 100px;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .controls {
-  text-align: center;
-  margin: 20px;
+  display: flex;
+  flex-direction: row; 
+  gap: 10px; 
 }
+
+.controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px; 
+  cursor: pointer;
+}
+
 
 button {
   font-size: 18px;
+  font-family: Silkmore;
+  font-weight:700;
   padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
@@ -235,8 +262,3 @@ button:hover {
   background-color: #45a049;
 }
 
-.error {
-  color: red;
-  text-align: center;
-  margin: 20px;
-}

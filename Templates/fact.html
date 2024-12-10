@@ -15,12 +15,11 @@
           <div id="tv_content">
             <!-- Loading Screen -->
             <img id="loading-screen" class="video" src="https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571155222/giphy_n0r827.gif">
-            
             <!-- Main TV Screen -->
             <div id="main-tv-screen" style="display:none;" class="video">
               <form id="karaoke-form" action="{{ url_for('fact') }}" method="POST">
                 <div class="form-container">
-                  <h1>While we prepare your song, did you know? .... </h1>
+                  <h1>While we prepare your song, did you know?</h1>
                   <p>{{ fact }}</p>
                   <input type="hidden" name="fact" value="{{ fact }}">
                   <input type="hidden" name="downloaded_song_path" value="{{ downloaded_song_path }}">
@@ -32,7 +31,7 @@
           <div id="tv_pixels" class="pixels" style="background-image: url('https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119227/vhs-overlay_zpzs7x.png')"></div>
         </div>
         <img class="tv" src="https://res.cloudinary.com/cyborgspaceviking/image/upload/v1571119227/80s-tv_ekkex2.png">
-        <span class="cta">ENTER YOUR SONGS</span>
+        <span class="cta">ENJOY THIS FACT WHILE YOU WAIT!</span>
       </div>
     </div>
     <div class="heading">
