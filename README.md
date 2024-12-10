@@ -70,15 +70,17 @@ echo %AZURE_ENDPOINT% # to check it saved properly
 
 - **Song Processing**: Uses Demucs to separate vocals from instrumental tracks
 
-  ![Screenshot 2024-12-10 112343](C:\Users\Tinu\Pictures\Screenshots\Screenshot 2024-12-10 112343.png)
+  
 
-- **Lyrics Synchronisation**: Matches transcribed lyrics with audio timing![Screenshot 2024-12-10 112328](C:\Users\Tinu\Pictures\Screenshots\Screenshot 2024-12-10 112328.png)
-
-- **Audio Control**: Independent volume control for vocals and instrumental tracks![Screenshot 2024-12-10 112222](C:\Users\Tinu\Pictures\Screenshots\Screenshot 2024-12-10 112222.png)
+- **Lyrics Synchronisation**: Matches transcribed lyrics with audio timing
 
   
 
-- **Interactive Interface**: Retro TV-style design with start/reset controls - as well as a fun fact to keep the user engaged whilst the karaoke set up is underway!![Screenshot 2024-12-10 112429](C:\Users\Tinu\Pictures\Screenshots\Screenshot 2024-12-10 112429.png)
+- **Audio Control**: Independent volume control for vocals and instrumental tracks!
+
+  
+
+- **Interactive Interface**: Retro TV-style design with start/reset controls - as well as a fun fact to keep the user engaged whilst the karaoke set up is underway!
 
 ## Features in Detail
 
